@@ -40,7 +40,7 @@ void TLBCacheCreate(TLBCache *tcache, TLBCacheType type, CacheArrayType ctype, A
 
         /* Initialize TLB cache */
         tcache->type = type;
-        tcache->latency =  latency; //0; leo edit
+        tcache->latency =  0;//latency;  leo edit
 }
 
 
