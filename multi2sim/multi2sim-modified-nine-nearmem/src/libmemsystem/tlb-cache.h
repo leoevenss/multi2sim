@@ -110,8 +110,8 @@ static inline unsigned int TLBCacheGetNumWays(TLBCache *tcache)
 
 static inline unsigned int TLBCacheGetLatency(TLBCache *tcache)
 {
-        return tcache->latency;
-        //return 0;//leo edit
+        //return tcache->latency;
+        return 0;//leo edit
 }
 
 static inline char* TLBCacheGetName(TLBCache *tcache)
