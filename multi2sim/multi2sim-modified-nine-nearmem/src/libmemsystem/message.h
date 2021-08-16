@@ -109,7 +109,7 @@ static inline long long MsgGetPTE(Msg *msg) { if (msg->pte < 0) msg->pte = mmu_g
 /* TLB latency hack */
 static inline void MsgEndTLBAccess(Msg *msg) { if (msg->tlb_cycle[1] < 0) msg->tlb_cycle[1] = esim_cycle; }
 static inline void MsgBeginTLBAccess(Msg *msg) { if (msg->tlb_cycle[0] < 0) msg->tlb_cycle[0] = esim_cycle; }
-static inline long long MsgGetTLBLatency(Msg *msg) { assert((msg->tlb_cycle[0] >= 0) && (msg->tlb_cycle[1] >= msg->tlb_cycle[0]));return msg->tlb_cycle[1] - msg->tlb_cycle[0]; }//return  0;}// leo edit
+static inline long long MsgGetTLBLatency(Msg *msg) { assert((msg->tlb_cycle[0] >= 0) && (msg->tlb_cycle[1] >= msg->tlb_cycle[0]))return msg->tlb_cycle[1] - msg->tlb_cycle[0]; }//return  0;}// leo edit
 
 /* Msg Buffer Wait */
 static inline unsigned int MsgWasWaitingForBuffer(Msg *msg) { return msg->buffer_wait ? 1 : 0; }
