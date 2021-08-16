@@ -1214,7 +1214,7 @@ void TlbReqHandler(Module *mod, Msg *msg)
         }
 
         /* L1 TLB lookup - currently cycle is also included in TLB lookup */
-        unsigned int latency =  TLBCacheGetLatency(l1tlb) - 1; // 0; leo edit
+        unsigned int latency = 0;// TLBCacheGetLatency(l1tlb) - 1;  leo edit
         TLBBlock *l1blk = TLBCacheFindBlock(l1tlb, MsgGetTag(msg));
         if (l1blk)
         {
@@ -1230,7 +1230,7 @@ void TlbReqHandler(Module *mod, Msg *msg)
         /* Lookup L2 TLB, if it is being modeled */
         if (l2tlb)
         {
-                latency +=  TLBCacheGetLatency(l2tlb);//0 leo edit
+                latency +=  0; //TLBCacheGetLatency(l2tlb); leo edit
                 TLBBlock *l2blk = TLBCacheFindBlock(l2tlb, MsgGetTag(msg));
                 if (l2blk)
                 {
