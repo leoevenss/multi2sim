@@ -1,0 +1,667 @@
+[ General ]
+PageTableEntrySize = 8
+BlockSize = 64
+PageSize = 4096
+MainMemorySize = 8192
+TransactionQueueSize = 128
+CoherenceType = MESISparse
+
+Per core LLC access statistics:
+Core0 LLC access: 267025 (267025, 0), till simpoint: 0 (0, 0)
+Total LLC access: 267025 (267025, 0), till simpoint: 0 (0, 0)
+Per core LLC hit statistics:
+Core0 LLC hit: 3643 (3643, 0), till simpoint: 0 (0, 0)
+Total LLC hit: 3643 (3643, 0), till simpoint: 0 (0, 0)
+Total LLC miss: 263382 (263382, 0), till simpoint: 0 (0, 0)
+
+Prefetch attempts from L2 cache: 0
+
+Per core directory hit statistics:
+Core0 directory hit: 0 (0, 0), till simpoint: 0 (0, 0)
+Total directory hit: 0 (0, 0), till simpoint: 0 (0, 0)
+Total directory miss: 267025 (267025, 0), till simpoint: 0 (0, 0)
+
+Back-invalidation stats:
+Sparse directory allocations: 262850, need BackInv when block in LLC: 0 (0.000000%), need BackInv when block not in LLC: 0 (0.000000%), total BackInv percentage: 0.000000%
+
+[ MESISparse ]
+Inclusive = False
+CleanDataBlkPutReply = PutExReply
+
+ExWbReq = NoData_ExWbReq
+InLLCStateBits = 0
+SilentCleanEvictions = False
+
+OptimizedInterventions = True
+OptimizedInvalidations = True
+
+InvalidationsWaitForMisses = False
+InterventionsWaitForWritebacks = False
+InvalidationsWaitForWritebacks = False
+BackInvalidationsWaitForWritebacks = False
+
+[ Msgs ]
+PteReq.Count = 4192
+PteReq.Bytes = 41920
+
+PteRep.Count = 4175
+PteRep.Bytes = 75150
+
+PteNack.Count = 17
+PteNack.Bytes = 170
+
+ShGetReq.Count = 262781
+ShGetReq.Bytes = 2627810
+
+ShPutRep.Count = 451
+ShPutRep.Bytes = 33374
+
+ExGetReq.Count = 69
+ExGetReq.Bytes = 690
+
+CleanData_Norm_ExPutRep.Count = 262399
+CleanData_Norm_ExPutRep.Bytes = 19417526
+
+NoData_ShWbReq.Count = 43
+NoData_ShWbReq.Bytes = 430
+
+NoData_ExWbReq.Count = 258387
+NoData_ExWbReq.Bytes = 2583870
+
+DirtyData_ExWbReq.Count = 68
+DirtyData_ExWbReq.Bytes = 5032
+
+WbNormRep.Count = 258498
+WbNormRep.Bytes = 2584980
+
+DramLoadReq.Count = 263382
+DramLoadReq.Bytes = 2633820
+
+DramStoreReq.Count = 68
+DramStoreReq.Bytes = 680
+
+DramLoadRep.Count = 263382
+DramLoadRep.Bytes = 2633820
+
+DramStoreRep.Count = 68
+DramStoreRep.Bytes = 680
+
+
+[ prmod-0 ]
+InstPorts = 1
+DataPorts = 2
+WritePorts = 1
+
+MSHRs = 16
+WriteBuffers = 48
+
+NackRetryLatency = 20
+
+IL1Cache.Kind = SetAssoc
+IL1Cache.Sets = 64
+IL1Cache.Assoc = 8
+IL1Cache.BlockSize = 64
+IL1Cache.Policy = LRU
+IL1Cache.Candidates = 8
+
+IL1Cache.Latency = 2
+IL1Cache.Fills = 456
+
+IL1Cache.Invals.PrivateCacheEviction = 42
+
+IL1Cache.Invals.RemoteCacheInvalidation = 2
+
+DL1Cache.Kind = SetAssoc
+DL1Cache.Sets = 64
+DL1Cache.Assoc = 8
+DL1Cache.BlockSize = 64
+DL1Cache.Policy = LRU
+DL1Cache.Candidates = 8
+
+DL1Cache.Latency = 2
+DL1Cache.Fills = 262401
+
+DL1Cache.Invals.PrivateCacheEviction = 261885
+
+DL1Cache.Invals.RemoteCacheInvalidation = 4
+
+L2Cache.Kind = SetAssoc
+L2Cache.Sets = 512
+L2Cache.Assoc = 8
+L2Cache.BlockSize = 64
+L2Cache.Policy = LRU
+L2Cache.Candidates = 8
+
+L2Cache.Latency = 5
+L2Cache.Fills = 262850
+
+L2Cache.Invals.PrivateCacheEviction = 258754
+
+IL1TLB.Kind = SetAssoc
+IL1TLB.Sets = 16
+IL1TLB.Assoc = 4
+IL1TLB.BlockSize = 4096
+IL1TLB.Policy = LRU
+IL1TLB.Candidates = 4
+
+IL1TLB.Latency = 1
+IL1TLB.Fills = 47
+IL1TLB.Evictions = 2
+
+DL1TLB.Kind = SetAssoc
+DL1TLB.Sets = 16
+DL1TLB.Assoc = 4
+DL1TLB.BlockSize = 4096
+DL1TLB.Policy = LRU
+DL1TLB.Candidates = 4
+
+DL1TLB.Latency = 1
+DL1TLB.Fills = 4132
+DL1TLB.Evictions = 4068
+
+L2TLB.Kind = SetAssoc
+L2TLB.Sets = 128
+L2TLB.Assoc = 4
+L2TLB.BlockSize = 4096
+L2TLB.Policy = LRU
+L2TLB.Candidates = 4
+
+L2TLB.Latency = 4
+L2TLB.Fills = 4175
+L2TLB.Evictions = 3663
+
+Block.InstFetch.Accesses = 8401175
+Block.InstFetch.LocalL1Hits = 8400719
+Block.InstFetch.RemoteL1Hits = 4
+Block.InstFetch.L2Hits = 1
+Block.InstFetch.Nacks = 0
+
+Block.DataRead.Accesses = 4201860
+Block.DataRead.LocalL1Hits = 3939528
+Block.DataRead.RemoteL1Hits = 2
+Block.DataRead.L2Hits = 0
+Block.DataRead.Nacks = 0
+
+Block.DataReadEx.Accesses = 1915
+Block.DataReadEx.LocalL1Hits = 1846
+Block.DataReadEx.RemoteL1Hits = 0
+Block.DataReadEx.L2Hits = 0
+Block.DataReadEx.Nacks = 0
+
+Block.DataWrite.Accesses = 1461
+Block.DataWrite.LocalL1Hits = 1461
+Block.DataWrite.RemoteL1Hits = 0
+Block.DataWrite.L2Hits = 0
+Block.DataWrite.Nacks = 0
+
+Block.InstructionPrefetch.Accesses = 0
+Block.InstructionPrefetch.LocalL1Hits = 0
+Block.InstructionPrefetch.RemoteL1Hits = 0
+Block.InstructionPrefetch.L2Hits = 0
+Block.InstructionPrefetch.Nacks = 0
+
+Block.DataPrefetch.Accesses = 0
+Block.DataPrefetch.LocalL1Hits = 0
+Block.DataPrefetch.RemoteL1Hits = 0
+Block.DataPrefetch.L2Hits = 0
+Block.DataPrefetch.Nacks = 0
+
+Block.PrefetchX.Accesses = 0
+Block.PrefetchX.LocalL1Hits = 0
+Block.PrefetchX.RemoteL1Hits = 0
+Block.PrefetchX.L2Hits = 0
+Block.PrefetchX.Nacks = 0
+
+Hist.Accesses.0 = 262399
+Hist.Accesses.1 = 145
+Hist.Accesses.2 = 105
+Hist.Accesses.3 = 80
+Hist.Accesses.4 = 45
+Hist.Accesses.5 = 28
+Hist.Accesses.6 = 16
+Hist.Accesses.7 = 10
+Hist.Accesses.8 = 14
+Hist.Accesses.9 = 14
+Hist.Accesses.10 = 7
+Hist.Accesses.11 = 9
+Hist.Accesses.12 = 8
+Hist.Accesses.13 = 7
+Hist.Accesses.14 = 8
+Hist.Accesses.15 = 3
+Hist.Accesses.16 = 262147
+Hist.Accesses.17 = 5
+Hist.Accesses.18 = 7
+Hist.Accesses.19 = 5
+Hist.Accesses.20 = 3
+Hist.Accesses.21 = 5
+Hist.Accesses.22 = 3
+Hist.Accesses.23 = 3
+Hist.Accesses.24 = 4
+Hist.Accesses.25 = 3
+Hist.Accesses.26 = 2
+Hist.Accesses.27 = 5
+Hist.Accesses.28 = 4
+Hist.Accesses.29 = 3
+Hist.Accesses.31 = 2
+Hist.Accesses.32 = 15
+Hist.Accesses.33 = 1
+Hist.Accesses.34 = 4
+Hist.Accesses.35 = 4
+Hist.Accesses.36 = 1
+Hist.Accesses.37 = 2
+Hist.Accesses.38 = 2
+Hist.Accesses.39 = 1
+Hist.Accesses.40 = 2
+Hist.Accesses.41 = 2
+Hist.Accesses.42 = 3
+Hist.Accesses.44 = 3
+Hist.Accesses.47 = 2
+Hist.Accesses.48 = 2
+Hist.Accesses.49 = 2
+Hist.Accesses.51 = 3
+Hist.Accesses.52 = 1
+Hist.Accesses.53 = 1
+Hist.Accesses.54 = 3
+Hist.Accesses.56 = 1
+Hist.Accesses.58 = 1
+Hist.Accesses.60 = 2
+Hist.Accesses.62 = 1
+Hist.Accesses.64 = 56
+Hist.Accesses.67 = 1
+Hist.Accesses.71 = 2
+Hist.Accesses.75 = 2
+Hist.Accesses.77 = 1
+Hist.Accesses.78 = 1
+Hist.Accesses.86 = 2
+Hist.Accesses.88 = 1
+Hist.Accesses.89 = 1
+Hist.Accesses.91 = 1
+Hist.Accesses.96 = 1
+Hist.Accesses.98 = 1
+Hist.Accesses.104 = 1
+Hist.Accesses.115 = 1
+Hist.Accesses.122 = 1
+Hist.Accesses.8401491 = 18
+
+PTE.InstFetch.Accesses = 8401175
+PTE.InstFetch.L1Hits = 8401128
+PTE.InstFetch.L2Hits = 2
+PTE.InstFetch.Nacks = 11
+
+PTE.DataRead.Accesses = 4201860
+PTE.DataRead.L1Hits = 4197740
+PTE.DataRead.L2Hits = 2
+PTE.DataRead.Nacks = 6
+
+PTE.DataReadEx.Accesses = 1915
+PTE.DataReadEx.L1Hits = 1903
+PTE.DataReadEx.L2Hits = 0
+PTE.DataReadEx.Nacks = 0
+
+PTE.DataWrite.Accesses = 0
+PTE.DataWrite.L1Hits = 0
+PTE.DataWrite.L2Hits = 0
+PTE.DataWrite.Nacks = 0
+
+PTE.InstructionPrefetch.Accesses = 0
+PTE.InstructionPrefetch.L1Hits = 0
+PTE.InstructionPrefetch.L2Hits = 0
+PTE.InstructionPrefetch.Nacks = 0
+
+PTE.DataPrefetch.Accesses = 0
+PTE.DataPrefetch.L1Hits = 0
+PTE.DataPrefetch.L2Hits = 0
+PTE.DataPrefetch.Nacks = 0
+
+PTE.PrefetchX.Accesses = 0
+PTE.PrefetchX.L1Hits = 0
+PTE.PrefetchX.L2Hits = 0
+PTE.PrefetchX.Nacks = 0
+
+InstFetchRequestsWaitingForWB = 0
+InstFetchUniqueRequestsWaitingForWB = 0
+InstFetchRequestsWaitingForFreeWB = 0
+InstFetchUniqueRequestsWaitingForFreeWB = 0
+InstFetchRequestsWaitingForMSHR = 121
+InstFetchUniqueRequestsWaitingForMSHR = 121
+InstFetchRequestsWaitingForFreeMSHR = 0
+InstFetchUniqueRequestsWaitingForFreeMSHR = 0
+
+DataReadRequestsWaitingForWB = 0
+DataReadUniqueRequestsWaitingForWB = 0
+DataReadRequestsWaitingForFreeWB = 0
+DataReadUniqueRequestsWaitingForFreeWB = 0
+DataReadRequestsWaitingForMSHR = 3928951
+DataReadUniqueRequestsWaitingForMSHR = 3928951
+DataReadRequestsWaitingForFreeMSHR = 0
+DataReadUniqueRequestsWaitingForFreeMSHR = 0
+
+DataReadExRequestsWaitingForWB = 0
+DataReadExUniqueRequestsWaitingForWB = 0
+DataReadExRequestsWaitingForFreeWB = 0
+DataReadExUniqueRequestsWaitingForFreeWB = 0
+DataReadExRequestsWaitingForMSHR = 377
+DataReadExUniqueRequestsWaitingForMSHR = 377
+DataReadExRequestsWaitingForFreeMSHR = 0
+DataReadExUniqueRequestsWaitingForFreeMSHR = 0
+
+DataWriteRequestsWaitingForWB = 0
+DataWriteUniqueRequestsWaitingForWB = 0
+DataWriteRequestsWaitingForFreeWB = 0
+DataWriteUniqueRequestsWaitingForFreeWB = 0
+DataWriteRequestsWaitingForMSHR = 0
+DataWriteUniqueRequestsWaitingForMSHR = 0
+DataWriteRequestsWaitingForFreeMSHR = 0
+DataWriteUniqueRequestsWaitingForFreeMSHR = 0
+
+InstructionPrefetchRequestsWaitingForWB = 0
+InstructionPrefetchUniqueRequestsWaitingForWB = 0
+InstructionPrefetchRequestsWaitingForFreeWB = 0
+InstructionPrefetchUniqueRequestsWaitingForFreeWB = 0
+InstructionPrefetchRequestsWaitingForMSHR = 0
+InstructionPrefetchUniqueRequestsWaitingForMSHR = 0
+InstructionPrefetchRequestsWaitingForFreeMSHR = 0
+InstructionPrefetchUniqueRequestsWaitingForFreeMSHR = 0
+
+DataPrefetchRequestsWaitingForWB = 0
+DataPrefetchUniqueRequestsWaitingForWB = 0
+DataPrefetchRequestsWaitingForFreeWB = 0
+DataPrefetchUniqueRequestsWaitingForFreeWB = 0
+DataPrefetchRequestsWaitingForMSHR = 0
+DataPrefetchUniqueRequestsWaitingForMSHR = 0
+DataPrefetchRequestsWaitingForFreeMSHR = 0
+DataPrefetchUniqueRequestsWaitingForFreeMSHR = 0
+
+PrefetchXRequestsWaitingForWB = 0
+PrefetchXUniqueRequestsWaitingForWB = 0
+PrefetchXRequestsWaitingForFreeWB = 0
+PrefetchXUniqueRequestsWaitingForFreeWB = 0
+PrefetchXRequestsWaitingForMSHR = 0
+PrefetchXUniqueRequestsWaitingForMSHR = 0
+PrefetchXRequestsWaitingForFreeMSHR = 0
+PrefetchXUniqueRequestsWaitingForFreeMSHR = 0
+
+WriteBack.Count = 258498
+WriteBack.Dirty = 68
+WriteBack.Shared = 43
+WriteBack.Nacks = 0
+WriteBack.Retries = 0
+
+[ shmod-0 ]
+MSHRs = 16
+WriteBuffers = 32
+TransientBuffers = 48
+FillWriteBuffers = 0
+FillTransientBuffers = 0
+
+LLC.Kind = SetAssoc
+LLC.Sets = 2048
+LLC.Assoc = 16
+LLC.BlockSize = 64
+LLC.Policy = LRU
+LLC.Candidates = 16
+
+LLC.Latency = 8
+
+LLC.LifetimeCycles.SharedCacheEviction.Clean.PRO = 353207962064
+LLC.DeadCycles.SharedCacheEviction.Clean.PRO = 353198571915
+LLC.Invals.SharedCacheEviction.Clean.PRO = 230250
+
+LLC.LifetimeCycles.SharedCacheEviction.Clean.PRW = 105495421
+LLC.DeadCycles.SharedCacheEviction.Clean.PRW = 105495421
+LLC.Invals.SharedCacheEviction.Clean.PRW = 71
+
+LLC.LifetimeCycles.SharedCacheEviction.Owned.PRO = 2898954
+LLC.DeadCycles.SharedCacheEviction.Owned.PRO = 2898954
+LLC.Invals.SharedCacheEviction.Owned.PRO = 2
+
+LLC.LifetimeCycles.SharedCacheEviction.Owned.PRW = 1513587
+LLC.DeadCycles.SharedCacheEviction.Owned.PRW = 1513587
+LLC.Invals.SharedCacheEviction.Owned.PRW = 1
+
+LLC.LifetimeCycles.SharedCacheEviction.Shared.PRO = 432685601
+LLC.DeadCycles.SharedCacheEviction.Shared.PRO = 432685601
+LLC.Invals.SharedCacheEviction.Shared.PRO = 290
+
+
+LLC.Fills.Inst = 451
+LLC.Fills.Data = 262399
+LLC.Fills.Pte = 532
+
+LLC.Blocks.Inst.PRO = 451
+LLC.Blocks.Data.PRO = 262306
+LLC.Blocks.Data.PRW = 93
+LLC.Blocks.Pte.PRO = 532
+
+SparseDir.Kind = SetAssoc
+SparseDir.Sets = 2048
+SparseDir.Assoc = 8
+SparseDir.BlockSize = 64
+SparseDir.Policy = NRU
+SparseDir.Candidates = 8
+
+SparseDir.Nodes = 1
+SparseDir.TrackSharers = True
+SparseDir.TrackTouchSharers = True
+
+SparseDir.Tag.Reads = 0
+SparseDir.Tag.Writes = 0
+SparseDir.Data.Reads = 0
+SparseDir.Write.Writes = 0
+SparseDir.LifetimeCycles.PrivateCacheEviction.Owned.PRO = 49644237685
+SparseDir.DeadCycles.PrivateCacheEviction.Owned.PRO = 49644237685
+SparseDir.Invals.Leafs.PrivateCacheEviction.Owned.PRO = 0
+SparseDir.Invals.PrivateCacheEviction.Owned.PRO = 258384
+
+SparseDir.LifetimeCycles.PrivateCacheEviction.Owned.PRW = 13165846
+SparseDir.DeadCycles.PrivateCacheEviction.Owned.PRW = 13165846
+SparseDir.Invals.Leafs.PrivateCacheEviction.Owned.PRW = 0
+SparseDir.Invals.PrivateCacheEviction.Owned.PRW = 71
+
+SparseDir.LifetimeCycles.PrivateCacheEviction.Shared.PRO = 457310915
+SparseDir.DeadCycles.PrivateCacheEviction.Shared.PRO = 457310915
+SparseDir.Invals.Leafs.PrivateCacheEviction.Shared.PRO = 0
+SparseDir.Invals.PrivateCacheEviction.Shared.PRO = 43
+
+
+SparseDir.Fills.Inst = 451
+SparseDir.Fills.Data = 262399
+SparseDir.Fills.Pte = 0
+
+
+SparseDir.Blocks.Inst.PRO.Accesses.0 = 451
+SparseDir.Blocks.Data.PRO.Accesses.0 = 262306
+SparseDir.Blocks.Data.PRW.Accesses.0 = 93
+
+SparseDir.Blocks.Inst.PRO.MaxSharers.1 = 451
+SparseDir.Blocks.Data.PRO.MaxSharers.1 = 262306
+SparseDir.Blocks.Data.PRW.MaxSharers.1 = 93
+
+SparseDir.Blocks.Inst.PRO.TouchSharers.1 = 451
+SparseDir.Blocks.Data.PRO.TouchSharers.1 = 262306
+SparseDir.Blocks.Data.PRW.TouchSharers.1 = 93
+
+Block.InstFetch.Accesses = 451
+Block.InstFetch.Hits = 0
+
+Block.DataRead.Accesses = 262330
+Block.DataRead.Hits = 0
+
+Block.DataReadEx.Accesses = 69
+Block.DataReadEx.Hits = 0
+
+Block.DataWrite.Accesses = 0
+Block.DataWrite.Hits = 0
+
+Block.InstructionPrefetch.Accesses = 0
+Block.InstructionPrefetch.Hits = 0
+
+Block.DataPrefetch.Accesses = 0
+Block.DataPrefetch.Hits = 0
+
+Block.PrefetchX.Accesses = 0
+Block.PrefetchX.Hits = 0
+
+Block.Upgrades = 0
+
+NonIncl.Block.InstFetch.Misses = 0
+NonIncl.Block.InstFetch.Fills = 0
+NonIncl.Block.InstFetch.Hits = 0
+
+NonIncl.Block.DataRead.Misses = 0
+NonIncl.Block.DataRead.Fills = 0
+NonIncl.Block.DataRead.Hits = 0
+
+NonIncl.Block.DataReadEx.Misses = 0
+NonIncl.Block.DataReadEx.Fills = 0
+NonIncl.Block.DataReadEx.Hits = 0
+
+NonIncl.Block.DataWrite.Misses = 0
+NonIncl.Block.DataWrite.Fills = 0
+NonIncl.Block.DataWrite.Hits = 0
+
+NonIncl.Block.InstructionPrefetch.Misses = 0
+NonIncl.Block.InstructionPrefetch.Fills = 0
+NonIncl.Block.InstructionPrefetch.Hits = 0
+
+NonIncl.Block.DataPrefetch.Misses = 0
+NonIncl.Block.DataPrefetch.Fills = 0
+NonIncl.Block.DataPrefetch.Hits = 0
+
+NonIncl.Block.PrefetchX.Misses = 0
+NonIncl.Block.PrefetchX.Fills = 0
+NonIncl.Block.PrefetchX.Hits = 0
+
+NonIncl.Upgrades = 0
+
+PTE.InstFetch.Accesses = 45
+PTE.InstFetch.Hits = 35
+
+PTE.DataRead.Accesses = 4118
+PTE.DataRead.Hits = 3599
+
+PTE.DataReadEx.Accesses = 12
+PTE.DataReadEx.Hits = 9
+
+PTE.DataWrite.Accesses = 0
+PTE.DataWrite.Hits = 0
+
+PTE.InstructionPrefetch.Accesses = 0
+PTE.InstructionPrefetch.Hits = 0
+
+PTE.DataPrefetch.Accesses = 0
+PTE.DataPrefetch.Hits = 0
+
+PTE.PrefetchX.Accesses = 0
+PTE.PrefetchX.Hits = 0
+
+
+InstFetchRequestsWaitingForWB = 0
+InstFetchUniqueRequestsWaitingForWB = 0
+InstFetchRequestsWaitingForFreeWB = 0
+InstFetchUniqueRequestsWaitingForFreeWB = 0
+InstFetchRequestsWaitingForMSHR = 11
+InstFetchUniqueRequestsWaitingForMSHR = 2
+InstFetchRequestsWaitingForFreeMSHR = 0
+InstFetchUniqueRequestsWaitingForFreeMSHR = 0
+InstFetchRequestsWaitingForTB = 0
+InstFetchUniqueRequestsWaitingForTB = 0
+InstFetchRequestsWaitingForFreeTB = 0
+InstFetchUniqueRequestsWaitingForFreeTB = 0
+
+DataReadRequestsWaitingForWB = 0
+DataReadUniqueRequestsWaitingForWB = 0
+DataReadRequestsWaitingForFreeWB = 0
+DataReadUniqueRequestsWaitingForFreeWB = 0
+DataReadRequestsWaitingForMSHR = 6
+DataReadUniqueRequestsWaitingForMSHR = 2
+DataReadRequestsWaitingForFreeMSHR = 0
+DataReadUniqueRequestsWaitingForFreeMSHR = 0
+DataReadRequestsWaitingForTB = 0
+DataReadUniqueRequestsWaitingForTB = 0
+DataReadRequestsWaitingForFreeTB = 0
+DataReadUniqueRequestsWaitingForFreeTB = 0
+
+DataReadExRequestsWaitingForWB = 0
+DataReadExUniqueRequestsWaitingForWB = 0
+DataReadExRequestsWaitingForFreeWB = 0
+DataReadExUniqueRequestsWaitingForFreeWB = 0
+DataReadExRequestsWaitingForMSHR = 0
+DataReadExUniqueRequestsWaitingForMSHR = 0
+DataReadExRequestsWaitingForFreeMSHR = 0
+DataReadExUniqueRequestsWaitingForFreeMSHR = 0
+DataReadExRequestsWaitingForTB = 0
+DataReadExUniqueRequestsWaitingForTB = 0
+DataReadExRequestsWaitingForFreeTB = 0
+DataReadExUniqueRequestsWaitingForFreeTB = 0
+
+DataWriteRequestsWaitingForWB = 0
+DataWriteUniqueRequestsWaitingForWB = 0
+DataWriteRequestsWaitingForFreeWB = 0
+DataWriteUniqueRequestsWaitingForFreeWB = 0
+DataWriteRequestsWaitingForMSHR = 0
+DataWriteUniqueRequestsWaitingForMSHR = 0
+DataWriteRequestsWaitingForFreeMSHR = 0
+DataWriteUniqueRequestsWaitingForFreeMSHR = 0
+DataWriteRequestsWaitingForTB = 0
+DataWriteUniqueRequestsWaitingForTB = 0
+DataWriteRequestsWaitingForFreeTB = 0
+DataWriteUniqueRequestsWaitingForFreeTB = 0
+
+InstructionPrefetchRequestsWaitingForWB = 0
+InstructionPrefetchUniqueRequestsWaitingForWB = 0
+InstructionPrefetchRequestsWaitingForFreeWB = 0
+InstructionPrefetchUniqueRequestsWaitingForFreeWB = 0
+InstructionPrefetchRequestsWaitingForMSHR = 0
+InstructionPrefetchUniqueRequestsWaitingForMSHR = 0
+InstructionPrefetchRequestsWaitingForFreeMSHR = 0
+InstructionPrefetchUniqueRequestsWaitingForFreeMSHR = 0
+InstructionPrefetchRequestsWaitingForTB = 0
+InstructionPrefetchUniqueRequestsWaitingForTB = 0
+InstructionPrefetchRequestsWaitingForFreeTB = 0
+InstructionPrefetchUniqueRequestsWaitingForFreeTB = 0
+
+DataPrefetchRequestsWaitingForWB = 0
+DataPrefetchUniqueRequestsWaitingForWB = 0
+DataPrefetchRequestsWaitingForFreeWB = 0
+DataPrefetchUniqueRequestsWaitingForFreeWB = 0
+DataPrefetchRequestsWaitingForMSHR = 0
+DataPrefetchUniqueRequestsWaitingForMSHR = 0
+DataPrefetchRequestsWaitingForFreeMSHR = 0
+DataPrefetchUniqueRequestsWaitingForFreeMSHR = 0
+DataPrefetchRequestsWaitingForTB = 0
+DataPrefetchUniqueRequestsWaitingForTB = 0
+DataPrefetchRequestsWaitingForFreeTB = 0
+DataPrefetchUniqueRequestsWaitingForFreeTB = 0
+
+PrefetchXRequestsWaitingForWB = 0
+PrefetchXUniqueRequestsWaitingForWB = 0
+PrefetchXRequestsWaitingForFreeWB = 0
+PrefetchXUniqueRequestsWaitingForFreeWB = 0
+PrefetchXRequestsWaitingForMSHR = 0
+PrefetchXUniqueRequestsWaitingForMSHR = 0
+PrefetchXRequestsWaitingForFreeMSHR = 0
+PrefetchXUniqueRequestsWaitingForFreeMSHR = 0
+PrefetchXRequestsWaitingForTB = 0
+PrefetchXUniqueRequestsWaitingForTB = 0
+PrefetchXRequestsWaitingForFreeTB = 0
+PrefetchXUniqueRequestsWaitingForFreeTB = 0
+
+TransientBuffer.Fwd.Count = 0
+TransientBuffer.Fwd.Latency = 0
+TransientBuffer.Intrv.Count = 0
+TransientBuffer.Intrv.Latency = 0
+TransientBuffer.Inval.Count = 0
+TransientBuffer.Inval.Latency = 0
+TransientBuffer.BkInval.Count = 0
+TransientBuffer.BkInval.Latency = 0
+
+Stash.Allocation = 0
+Stash.Writeback = 0
+Stash.Full = 0
+Stash.Upgrade.Inval = 0
+Stash.Upgrade = 0
+
+WriteBacks = 68
+DirtyWriteBacks = 68
+

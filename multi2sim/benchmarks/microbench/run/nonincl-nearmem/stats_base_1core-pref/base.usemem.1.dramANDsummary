@@ -1,0 +1,13 @@
+
+; Multi2Sim 5.1 - A Simulation Framework for Chip-Multiprocessors
+; Please use command 'm2s --help' for a list of command-line options.
+; Last compilation: Aug 10 2021 04:50:42
+
+fatal: /home/leo/Desktop/Multi2sim/multi2sim-modified-nine-nearmem/src/m2s: not supported architecture.
+	The ELF file being loaded is a 64-bit file, currently not supported
+	by Multi2Sim. If you are compiling your own source code on a 64-bit
+	machine, please use the '-m32' flag in the gcc command-line. If you
+	get compilation errors related with missing '.h' files, check that
+	the 32-bit gcc package associated with your Linux distribution is
+	installed.
+

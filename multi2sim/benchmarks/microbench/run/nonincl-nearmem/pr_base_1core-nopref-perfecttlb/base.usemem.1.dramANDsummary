@@ -1,0 +1,199 @@
+
+; Multi2Sim 5.1 - A Simulation Framework for Chip-Multiprocessors
+; Please use command 'm2s --help' for a list of command-line options.
+; Last compilation: Aug 15 2021 02:05:57
+
+
+;
+; Using mem-config: /home/leo/Desktop/Multi2sim/multi2sim-modified-nine-nearmem/samples/node-1/sparse-nonincl-nru-4x-4ghz.cfg
+;
+
+[CTX 1000] 10000000:9748709:1218588630
+[CTX 1000] 20000000:18413758:2301719742
+[CTX 1001] 30000000:27176385:3397048137
+All contexts finished because finished_context_count >= total_context_count. finished_context_count = 2, total_context_count = 1
+
+;
+; Simulation Statistics Summary
+;
+
+[ General ]
+Time = 188.10
+SimType = Detailed
+SimEnd = ContextsFinished
+MaxContextsCreated = 2
+MaxContextsRunning = 2
+Memory = 78921728
+EmulatedInstructions = 30804250
+EmulatedInstructionsPerSecond = 163765
+
+Cycles = 27692652
+CyclesPerSecond = 147223
+FastForwardInstructions = 0
+CommittedInstructions = 30585878
+CommittedInstructionsPerCycle = 1.104
+CommittedMicroInstructions = 47783369
+CommittedMicroInstructionsPerCycle = 1.725
+BranchPredictionAccuracy = 0.9995
+Total cycles till SimPoints end = 0
+
+==== Channel [0] ====
+ =======================================================
+ ============== Printing Statistics [id:0]==============
+   Total Return Transactions : 285345 (18262080 bytes) aggregate average bandwidth 2.457GB/s
+      -Rank   0 : 
+        -Reads  : 115967 (7421888 bytes)
+        -Writes : 19057 (1219648 bytes)
+        -RowHits : 120421
+        -Bandwidth / Latency  (Bank 0): 0.144 GB/s		25.008 ns		14739 RowHits
+        -Bandwidth / Latency  (Bank 1): 0.140 GB/s		24.578 ns		14416 RowHits
+        -Bandwidth / Latency  (Bank 2): 0.151 GB/s		24.129 ns		16029 RowHits
+        -Bandwidth / Latency  (Bank 3): 0.147 GB/s		25.148 ns		15078 RowHits
+        -Bandwidth / Latency  (Bank 4): 0.145 GB/s		25.097 ns		14826 RowHits
+        -Bandwidth / Latency  (Bank 5): 0.148 GB/s		25.304 ns		15269 RowHits
+        -Bandwidth / Latency  (Bank 6): 0.145 GB/s		24.913 ns		14961 RowHits
+        -Bandwidth / Latency  (Bank 7): 0.143 GB/s		24.318 ns		15103 RowHits
+ == Power Data for Rank        0
+   Average Power (watts)     : 0.565
+     -Background (watts)     : 0.458
+     -Act/Pre    (watts)     : 0.009
+     -Burst      (watts)     : 0.072
+     -Refresh    (watts)     : 0.025
+      -Rank   1 : 
+        -Reads  : 133180 (8523520 bytes)
+        -Writes : 17141 (1097024 bytes)
+        -RowHits : 137936
+        -Bandwidth / Latency  (Bank 0): 0.167 GB/s		22.916 ns		18045 RowHits
+        -Bandwidth / Latency  (Bank 1): 0.162 GB/s		23.172 ns		17403 RowHits
+        -Bandwidth / Latency  (Bank 2): 0.161 GB/s		23.554 ns		17135 RowHits
+        -Bandwidth / Latency  (Bank 3): 0.159 GB/s		21.682 ns		17513 RowHits
+        -Bandwidth / Latency  (Bank 4): 0.161 GB/s		23.724 ns		16985 RowHits
+        -Bandwidth / Latency  (Bank 5): 0.158 GB/s		25.231 ns		16382 RowHits
+        -Bandwidth / Latency  (Bank 6): 0.165 GB/s		23.495 ns		17490 RowHits
+        -Bandwidth / Latency  (Bank 7): 0.161 GB/s		23.757 ns		16983 RowHits
+ == Power Data for Rank        1
+   Average Power (watts)     : 0.570
+     -Background (watts)     : 0.457
+     -Act/Pre    (watts)     : 0.008
+     -Burst      (watts)     : 0.080
+     -Refresh    (watts)     : 0.025
+ ---  Latency list (33)
+       [lat] : #
+       [20-29] : 226507
+       [30-39] : 5543
+       [40-49] : 3705
+       [50-59] : 360
+       [60-69] : 210
+       [70-79] : 574
+       [80-89] : 1067
+       [90-99] : 6516
+       [100-109] : 3308
+       [110-119] : 9
+       [120-129] : 3
+       [130-139] : 3
+       [140-149] : 15
+       [150-159] : 1
+       [160-169] : 3
+       [170-179] : 2
+       [180-189] : 7
+       [190-199] : 35
+       [200-209] : 63
+       [210-219] : 113
+       [220-229] : 186
+       [230-239] : 234
+       [240-249] : 214
+       [250-259] : 143
+       [260-269] : 108
+       [270-279] : 87
+       [280-289] : 63
+       [290-299] : 39
+       [300-309] : 14
+       [310-319] : 7
+       [320-329] : 3
+       [330-339] : 4
+       [340-349] : 1
+
+ == Pending Transactions : 0 (7380772)==
+//// Channel [0] ////
+==== Channel [1] ====
+ =======================================================
+ ============== Printing Statistics [id:1]==============
+   Total Return Transactions : 285281 (18257984 bytes) aggregate average bandwidth 2.456GB/s
+      -Rank   0 : 
+        -Reads  : 115959 (7421376 bytes)
+        -Writes : 19031 (1217984 bytes)
+        -RowHits : 120302
+        -Bandwidth / Latency  (Bank 0): 0.144 GB/s		24.561 ns		14728 RowHits
+        -Bandwidth / Latency  (Bank 1): 0.140 GB/s		24.079 ns		14414 RowHits
+        -Bandwidth / Latency  (Bank 2): 0.151 GB/s		23.433 ns		16019 RowHits
+        -Bandwidth / Latency  (Bank 3): 0.147 GB/s		24.806 ns		15050 RowHits
+        -Bandwidth / Latency  (Bank 4): 0.145 GB/s		24.879 ns		14804 RowHits
+        -Bandwidth / Latency  (Bank 5): 0.148 GB/s		24.565 ns		15252 RowHits
+        -Bandwidth / Latency  (Bank 6): 0.145 GB/s		24.402 ns		14957 RowHits
+        -Bandwidth / Latency  (Bank 7): 0.143 GB/s		23.792 ns		15078 RowHits
+ == Power Data for Rank        0
+   Average Power (watts)     : 0.565
+     -Background (watts)     : 0.459
+     -Act/Pre    (watts)     : 0.009
+     -Burst      (watts)     : 0.072
+     -Refresh    (watts)     : 0.025
+      -Rank   1 : 
+        -Reads  : 133159 (8522176 bytes)
+        -Writes : 17132 (1096448 bytes)
+        -RowHits : 137795
+        -Bandwidth / Latency  (Bank 0): 0.167 GB/s		22.886 ns		18021 RowHits
+        -Bandwidth / Latency  (Bank 1): 0.162 GB/s		22.968 ns		17386 RowHits
+        -Bandwidth / Latency  (Bank 2): 0.161 GB/s		23.303 ns		17113 RowHits
+        -Bandwidth / Latency  (Bank 3): 0.158 GB/s		21.517 ns		17503 RowHits
+        -Bandwidth / Latency  (Bank 4): 0.161 GB/s		23.173 ns		16972 RowHits
+        -Bandwidth / Latency  (Bank 5): 0.158 GB/s		24.370 ns		16357 RowHits
+        -Bandwidth / Latency  (Bank 6): 0.165 GB/s		23.152 ns		17488 RowHits
+        -Bandwidth / Latency  (Bank 7): 0.161 GB/s		23.546 ns		16955 RowHits
+ == Power Data for Rank        1
+   Average Power (watts)     : 0.570
+     -Background (watts)     : 0.458
+     -Act/Pre    (watts)     : 0.008
+     -Burst      (watts)     : 0.080
+     -Refresh    (watts)     : 0.025
+ ---  Latency list (33)
+       [lat] : #
+       [20-29] : 225471
+       [30-39] : 6035
+       [40-49] : 5631
+       [50-59] : 357
+       [60-69] : 302
+       [70-79] : 647
+       [80-89] : 1264
+       [90-99] : 7244
+       [100-109] : 904
+       [110-119] : 5
+       [120-129] : 2
+       [130-139] : 3
+       [140-149] : 2
+       [150-159] : 2
+       [160-169] : 1
+       [170-179] : 1
+       [180-189] : 5
+       [190-199] : 16
+       [200-209] : 63
+       [210-219] : 121
+       [220-229] : 178
+       [230-239] : 218
+       [240-249] : 230
+       [250-259] : 134
+       [260-269] : 103
+       [270-279] : 79
+       [280-289] : 43
+       [290-299] : 29
+       [300-309] : 12
+       [310-319] : 9
+       [320-329] : 2
+       [330-339] : 2
+       [340-349] : 3
+
+ == Pending Transactions : 0 (7380772)==
+//// Channel [1] ////
+Total number of physical pages allocated (PTE pages): 4422 (10), excluding PTE pages: 4412
+Fetcher mapped page count: 158, decoder mapped page count: 4254, PTE page count: 10
+Total number of physical memory blocks (64 bytes) touched by the application (code, data): 260305 (2050, 258255)
+Till simpoint total number of physical memory blocks (64 bytes) touched by the application (code, data): 260305 (2050, 258255)
